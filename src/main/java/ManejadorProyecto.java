@@ -15,6 +15,8 @@ public class ManejadorProyecto {
         proyectos.add(proyecto);
     }
 
+    public Proyecto eliminarProyecto(int indice){ return proyectos.remove(indice);}
+
     public ArrayList<Proyecto> getProyectos() {
         return proyectos;
     }

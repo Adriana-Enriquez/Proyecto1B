@@ -26,4 +26,19 @@ public class PruebaProyecto {
 
     }
 
+    @Test
+    public void delete_proyect_from_manejadorProyecto_when_eliminarProyecto(){
+
+        ManejadorProyecto manejador = new ManejadorProyecto();
+        manejador.agregarProyecto( new Proyecto("tema"));
+        assertEquals(manejador.getProyectos().size(), 1);
+
+        Proyecto proyectoAEliminar =  manejador.getProyectos().get(0);
+        Proyecto proyectoEliminado = manejador.eliminarProyecto(0);
+        assertEquals(proyectoAEliminar, proyectoEliminado);
+
+        assertEquals(manejador.getProyectos().size(), 0);
+
+    }
+
 }
