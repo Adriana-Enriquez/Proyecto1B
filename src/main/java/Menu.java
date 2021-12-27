@@ -8,5 +8,9 @@ public class Menu {
         String tema = sc.next();
         manejador.agregarProyecto(new Proyecto(tema));
         System.out.println("Cantidad de proyectos: " + manejador.getProyectos().size());
+        System.out.println("Eliminando proyecto....");
+        manejador.eliminarProyecto(0);
+        System.out.println("Cantidad de proyectos: " + manejador.getProyectos().size());
+
     }
 }
